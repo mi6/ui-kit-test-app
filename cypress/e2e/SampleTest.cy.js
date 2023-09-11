@@ -4,7 +4,7 @@
 
 describe('Testing Localhost 5173 Application Page', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:5173/')
+      cy.visit('/')
     })
   
     it('Verify application logo ', () => {
@@ -29,7 +29,7 @@ describe('Testing Localhost 5173 Application Page', () => {
      it('Verify Text "Enter a name to be greeted below"&"Name"', () => {
 
            cy.get('ic-text-field.hydrated').shadow().contains('Enter a name to be greeted below').should('be.visible')
-           cy.get('ic-text-field.hydrated').shadow().contains('Name12').should('be.visible')
+           cy.get('ic-text-field.hydrated').shadow().contains('Name').should('be.visible')
 
            
         
