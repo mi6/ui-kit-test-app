@@ -31,7 +31,7 @@ getTextboxField(name){
     cy.get('ic-button.hydrated').shadow().find('.button').should('be.visible').click()
 
     //after clicking on submit button should get message "Hello",with concatenate with above data 
-     cy.get('ic-typography.hydrated').should('be.visible')
+     cy.get('ic-typography.hydrated').contains('Hello,',name).should('be.visible')
      .reload()
 
 }

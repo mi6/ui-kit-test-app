@@ -41,12 +41,26 @@ describe('Testing Localhost 5173 Application Page', () => {
         
         cy.get('ic-button.hydrated').shadow().find('.button').should('be.visible').click()
 
-         cy.get('ic-typography.hydrated').should('be.visible')
+         cy.get('ic-typography.hydrated').contains('Hello,','World').should('be.visible')
 
               
            
            })
            
+           describe('ally', () => {
+            beforeEach(() => {
+            cy.injectAxe()
 
+            })
+            it('should have no detectable ally error on page load ', () => {
+
+                        cy.checkA11y()
+             
+                 
+            })    
+               
+
+            })
+      
 
     })
