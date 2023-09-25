@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-20T15:16:17.042Z",
+    "end": "2023-09-20T15:16:18.704Z",
+    "duration": 1662,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d349f50c-b715-404e-b10d-8b065f4a03a5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\AlertTest.cy.js",
+      "file": "cypress\\e2e\\AlertTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc4174ae-c522-4e16-bcd4-e41eef1426dc",
+          "title": "Testbox componentTest tesing applicatio Text",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify InfoMessage Alert Component ",
+              "fullTitle": "Testbox componentTest tesing applicatio Text Verify InfoMessage Alert Component ",
+              "timedOut": null,
+              "duration": 1509,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "alert.getInfoMessageAlert('For your informatio', 'Info', 'You should read this message.');",
+              "err": {},
+              "uuid": "bec203e9-1af8-425c-8d4a-d71aeb62ee90",
+              "parentUUID": "fc4174ae-c522-4e16-bcd4-e41eef1426dc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bec203e9-1af8-425c-8d4a-d71aeb62ee90"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1509,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,6 +1,10 @@
 
 //// <reference types="Cypress" />
 
+
+//Locater
+
+
 class AlertPage{
     //this function  check Neutral Alert line
     verifyNeutralAlert(){
@@ -81,7 +85,20 @@ class AlertPage{
         should('be.visible').contains('This alert is for displaying information.')
          
     }
-    
+    getInfoMessageAlert(title,subtitle,message){
+        cy.get('[variant="info"]').should('be.visible')
+        cy.get('[variant="info"]').shadow().find('.ic-typography-body.hydrated').
+        should('be.visible')
+        cy.get('[variant="info"]').shadow().find('.alert-icon.svg-container.icon-info').
+        should('be.visible')
+        cy.get('[variant="info"]').shadow().find('#info-title').
+        contains(title)
+        cy.get('[variant="info"]').shadow().find('.alert-title.ic-typography-subtitle-large.hydrated').
+        should('be.visible').contains(subtitle)
+        cy.get('[variant="info"]').shadow().find('.alert-message').
+        should('be.visible').contains(message)
+         
+    }
      //this function check all Error Alert line
     verifyErrorAlert(){
         cy.get('[variant="error"]').should('be.visible')
@@ -125,6 +142,19 @@ class AlertPage{
 
     }
     
+    getDataErrorAlert(title,subtitle,message){
+        cy.get('[variant="error"]').should('be.visible')
+        cy.get('[variant="error"]').shadow().find('.alert-icon.svg-container.icon-error').
+        should('be.visible')
+        cy.get('[variant="error"]').shadow().find('#error-title').
+        contains(title)
+         cy.get('[variant="error"]').shadow().find('.alert-title.ic-typography-subtitle-large.hydrated').
+        should('be.visible').contains(subtitle)
+        cy.get('[variant="error"]').shadow().find('.ic-typography-body.hydrated').
+        should('be.visible').contains(message)
+           
+
+    }
 
      //this function check all Warning Alert line
     verifyWarningAlert(){
@@ -168,6 +198,19 @@ class AlertPage{
     should('be.visible').contains('This alert is for displaying warnings.')
      
 
+   }
+   //this function check Warning  customise Alert "Hot Drink" 
+   getHotDrinkAlert(title,subtitle,message){
+   
+    cy.get('[heading="Hot drink"]').should('be.visible')
+    cy.get('[heading="Hot drink"]').shadow().find('.alert-icon.svg-container.icon-warning').
+    should('be.visible')
+    cy.get('[heading="Hot drink"]').shadow().find('#warning-title').
+    contains(title)
+    cy.get('[heading="Hot drink"]').shadow().find('.alert-title.ic-typography-subtitle-large.hydrated').
+    should('be.visible').contains(subtitle)
+    cy.get('[heading="Hot drink"]').shadow().find('.ic-typography-body.hydrated').
+    should('be.visible').contains(message)
    }
 
    //this function check all Success Alert line
@@ -215,8 +258,36 @@ class AlertPage{
 
    }
 
+  //this function check Success customise Alert "Success Login" 
+  getSuccessLoginAlert(title,subtitle,message){
+   
+    cy.get('[heading="Success Login"]').should('be.visible')
+    cy.get('[heading="Success Login"]').shadow().find('.alert-icon.svg-container.icon-success').
+    should('be.visible')
+    cy.get('[heading="Success Login"]').shadow().find('#success-title').
+    contains(title)
+    cy.get('[heading="Success Login"]').shadow().find('.alert-title.ic-typography-subtitle-large.hydrated').
+    should('be.visible').contains(subtitle)
+    cy.get('[heading="Success Login"]').shadow().find('.ic-typography-body.hydrated').
+    should('be.visible').contains(message)
+   }
 
+   getSuccessLoginLongMessageAlert(title,subtitle,message){
+   
+    cy.get('[heading="Success LoginLong message"]').should('be.visible')
+    cy.get('[heading="Success LoginLong message"]').shadow().find('.alert-icon.svg-container.icon-success').
+    should('be.visible')
+    cy.get('[heading="Success LoginLong message"]').shadow().find('#success-title').
+    contains(title)
+    cy.get('[heading="Success LoginLong message"]').shadow().find('.alert-title.ic-typography-subtitle-large.hydrated').
+    should('be.visible').contains(subtitle)
+    cy.get('[heading="Success LoginLong message"]').shadow().find('.ic-typography-body.hydrated').
+    should('be.visible').contains(message)
+   }
+  
+   
 
+    
    
 
 

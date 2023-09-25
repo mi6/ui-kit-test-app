@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-20T15:16:40.854Z",
+    "end": "2023-09-20T15:16:52.137Z",
+    "duration": 11283,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "934a81fb-622c-402c-b827-d60e9acb0488",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SampleTest.cy.js",
+      "file": "cypress\\e2e\\SampleTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a35147ef-a978-4a58-ac17-703e0af846f4",
+          "title": "Testing Localhost 5173 Application Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify application logo ",
+              "fullTitle": "Testing Localhost 5173 Application Page Verify application logo ",
+              "timedOut": null,
+              "duration": 1882,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[slot=\"app-icon\"]').should('be.visible');",
+              "err": {},
+              "uuid": "833d95ad-4923-4f0c-aaa1-4154fc9d2e09",
+              "parentUUID": "a35147ef-a978-4a58-ac17-703e0af846f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify application Name  ",
+              "fullTitle": "Testing Localhost 5173 Application Page Verify application Name  ",
+              "timedOut": null,
+              "duration": 2246,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[app-title=\"Application Name\"]').should('be.visible');",
+              "err": {},
+              "uuid": "87764f9d-a334-434a-99b2-279d1228746f",
+              "parentUUID": "a35147ef-a978-4a58-ac17-703e0af846f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify application Name and Logo togather ",
+              "fullTitle": "Testing Localhost 5173 Application Page Verify application Name and Logo togather ",
+              "timedOut": null,
+              "duration": 1008,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ic-top-navigation.hydrated').should('be.visible');",
+              "err": {},
+              "uuid": "4fcd8d26-6886-4095-b980-c3e53ab528c4",
+              "parentUUID": "a35147ef-a978-4a58-ac17-703e0af846f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Text \"Enter a name to be greeted below\"&\"Name\"",
+              "fullTitle": "Testing Localhost 5173 Application Page Verify Text \"Enter a name to be greeted below\"&\"Name\"",
+              "timedOut": null,
+              "duration": 2245,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ic-text-field.hydrated').shadow().contains('Enter a name to be greeted below').should('be.visible');\ncy.get('ic-text-field.hydrated').shadow().contains('Name').should('be.visible');",
+              "err": {},
+              "uuid": "5d1cc396-9d60-4292-90f2-9daf2620fced",
+              "parentUUID": "a35147ef-a978-4a58-ac17-703e0af846f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify TextBox field is visible  and  Enter a name and click On submit button and verify message \"Hello",
+              "fullTitle": "Testing Localhost 5173 Application Page Verify TextBox field is visible  and  Enter a name and click On submit button and verify message \"Hello",
+              "timedOut": null,
+              "duration": 2029,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ic-text-field.hydrated').shadow().find('ic-input-component-container').last().should('be.visible').type('World');\ncy.get('ic-button.hydrated').shadow().find('.button').should('be.visible').click();\ncy.get('ic-typography.hydrated').contains('Hello,', 'World').should('be.visible');",
+              "err": {},
+              "uuid": "58b46d1c-0bf5-4fca-86a8-6612caf7ce4f",
+              "parentUUID": "a35147ef-a978-4a58-ac17-703e0af846f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "1e8b4455-005c-44ce-b8eb-559c2a4ff866",
+              "title": "ally",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should have no detectable ally error on page load ",
+                  "fullTitle": "Testing Localhost 5173 Application Page ally should have no detectable ally error on page load ",
+                  "timedOut": null,
+                  "duration": 1478,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.checkA11y();",
+                  "err": {
+                    "message": "AssertionError: 2 accessibility violations were detected: expected 2 to equal 0",
+                    "estack": "AssertionError: 2 accessibility violations were detected: expected 2 to equal 0\n    at Context.eval (webpack://ui-kit-test-app/./node_modules/cypress-axe/dist/index.js:100:0)",
+                    "diff": null
+                  },
+                  "uuid": "d326d1a6-835e-4803-9a17-fcf557c3645a",
+                  "parentUUID": "1e8b4455-005c-44ce-b8eb-559c2a4ff866",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "d326d1a6-835e-4803-9a17-fcf557c3645a"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 1478,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "833d95ad-4923-4f0c-aaa1-4154fc9d2e09",
+            "87764f9d-a334-434a-99b2-279d1228746f",
+            "4fcd8d26-6886-4095-b980-c3e53ab528c4",
+            "5d1cc396-9d60-4292-90f2-9daf2620fced",
+            "58b46d1c-0bf5-4fca-86a8-6612caf7ce4f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9410,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
