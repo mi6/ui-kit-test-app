@@ -9,8 +9,10 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       # https://github.com/cypress-io/github-action
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v5
       - name: Cypress run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v2.2.7
       # # after the test run completes
       # # store videos and any screenshots
       # # NOTE: screenshots will be generated only if E2E test failed

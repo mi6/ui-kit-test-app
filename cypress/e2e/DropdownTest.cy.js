@@ -51,7 +51,8 @@ describe('DropDown ComponentTest', () => {
      it('should have no detectable ally error on page load ', () => {
 
        
-        cy.checkA11y()
+        
+      cy.checkA11y()
          
              
     })    
