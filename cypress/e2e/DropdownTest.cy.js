@@ -30,7 +30,7 @@ describe('DropDown ComponentTest', () => {
                 
      })
      it('Verify Dropdown  Component ', () => {
-        drop.selectDropdown('Double Espresso')
+        drop.selectDropdown('Flat White')
         cy.wait(2000)
 
         
