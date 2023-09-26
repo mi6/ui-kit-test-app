@@ -13,9 +13,13 @@
     "@ukic/fonts": "^2.2.0",
     "@ukic/react": "^2.2.0",
     "cypress": "^13.1.0",
+    "prettier": "^2.8.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "cy:run": "cypress run"
+   
   },
+
   
   "devDependencies": {
     "@types/react": "^18.2.15",

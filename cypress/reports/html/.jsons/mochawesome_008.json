@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-26T14:15:15.192Z",
+    "end": "2023-09-26T14:15:36.976Z",
+    "duration": 21784,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d0705874-0f00-4c10-85e4-66b28fd996be",
+      "title": "",
+      "fullFile": "cypress\\e2e\\DropdownTest.cy.js",
+      "file": "cypress\\e2e\\DropdownTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e150e1e-c7f3-4239-8a9e-fb1cbb14234f",
+          "title": "DropDown ComponentTest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 5738,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "drop.selectDropdown('Double Espresso');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "a48376c9-04e9-4204-9e1c-90cb804c0ae0",
+              "parentUUID": "0e150e1e-c7f3-4239-8a9e-fb1cbb14234f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 4685,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "drop.selectDropdown('Americano');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "f08334f1-7c45-4630-b9fe-933e2b6eb3cd",
+              "parentUUID": "0e150e1e-c7f3-4239-8a9e-fb1cbb14234f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 4386,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "drop.selectDropdown('Cappuccino');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "39455aa6-8e22-4a34-9b8c-6d66e617470f",
+              "parentUUID": "0e150e1e-c7f3-4239-8a9e-fb1cbb14234f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 5703,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "drop.selectDropdown('Flat White');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "099f24fd-bbce-410d-bad7-051f1581cbb3",
+              "parentUUID": "0e150e1e-c7f3-4239-8a9e-fb1cbb14234f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "aa9a0fcf-f5b9-4d76-8bc0-d6b49c134585",
+              "title": "ally",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should have no detectable ally error on page load ",
+                  "fullTitle": "DropDown ComponentTest ally should have no detectable ally error on page load ",
+                  "timedOut": null,
+                  "duration": 878,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.checkA11y();",
+                  "err": {
+                    "message": "AssertionError: 2 accessibility violations were detected: expected 2 to equal 0",
+                    "estack": "AssertionError: 2 accessibility violations were detected: expected 2 to equal 0\n    at Context.eval (webpack://ui-kit-test-app/./node_modules/cypress-axe/dist/index.js:100:0)",
+                    "diff": null
+                  },
+                  "uuid": "790e4eed-9bbd-494f-8259-510289479ce4",
+                  "parentUUID": "aa9a0fcf-f5b9-4d76-8bc0-d6b49c134585",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "790e4eed-9bbd-494f-8259-510289479ce4"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 878,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "a48376c9-04e9-4204-9e1c-90cb804c0ae0",
+            "f08334f1-7c45-4630-b9fe-933e2b6eb3cd",
+            "39455aa6-8e22-4a34-9b8c-6d66e617470f",
+            "099f24fd-bbce-410d-bad7-051f1581cbb3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20512,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
