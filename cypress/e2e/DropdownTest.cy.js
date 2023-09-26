@@ -30,12 +30,19 @@ describe('DropDown ComponentTest', () => {
                 
      })
      it('Verify Dropdown  Component ', () => {
-        drop.selectDropdown('Flat White')
+        drop.selectDropdown('mocha')
         cy.wait(2000)
 
         
                 
      })
+     it('Verify Dropdown  Component ', () => {
+      drop.selectDropdown('Americano')
+      cy.wait(2000)
+
+      
+              
+   })
     describe('ally', () => {
     beforeEach(() => {
     cy.injectAxe()
