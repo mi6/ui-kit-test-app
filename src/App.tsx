@@ -1,5 +1,5 @@
 import { IcSectionContainer, IcTextField, IcButton, IcTypography } from '@ukic/react/dist/components';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import './App.css'
 import { useRef, useState } from 'react';
 
