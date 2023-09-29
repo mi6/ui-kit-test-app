@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-29T17:59:08.521Z",
+    "end": "2023-09-29T17:59:17.124Z",
+    "duration": 8603,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d4e0dad2-ff6d-4cb6-9ec3-2ef26db25cf1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TextboxTest.cy.js",
+      "file": "cypress\\e2e\\TextboxTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da6fb958-b509-4341-b24c-0072e71d60b7",
+          "title": "Testbox componentTest tesing applicatio Text",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "call function from PageObject page ",
+              "fullTitle": "Testbox componentTest tesing applicatio Text call function from PageObject page ",
+              "timedOut": null,
+              "duration": 7952,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "text.verifyApplicationLogo();\ntext.verifyApplicationName();\ntext.verifyApplicationLogo_Name();\ntext.verifyTextboxHeaderText();\ntext.getTextboxField('Test123');\ntext.getTextboxField('World');\ntext.getTextboxField('Jhon$@');\ntext.getTextboxField('Krish£*');\ntext.getTextboxField('Mike?');\ntext.getTextboxField('Sam*^%$£');",
+              "err": {},
+              "uuid": "c627108e-3275-4ecd-ad48-eb11f967a256",
+              "parentUUID": "da6fb958-b509-4341-b24c-0072e71d60b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "0debc4ba-57ca-4c9e-a3b1-0bdc2afa70ad",
+              "title": "ally",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should have no detectable ally error on page load ",
+                  "fullTitle": "Testbox componentTest tesing applicatio Text ally should have no detectable ally error on page load ",
+                  "timedOut": null,
+                  "duration": 522,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.checkA11y(null, {\n  includedImpacts: ['critical']\n});",
+                  "err": {},
+                  "uuid": "cb8ed13b-1a4b-4873-8c2f-19357572269a",
+                  "parentUUID": "0debc4ba-57ca-4c9e-a3b1-0bdc2afa70ad",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "cb8ed13b-1a4b-4873-8c2f-19357572269a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 522,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "c627108e-3275-4ecd-ad48-eb11f967a256"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7952,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

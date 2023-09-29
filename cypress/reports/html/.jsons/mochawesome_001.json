@@ -1,0 +1,244 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 7,
+    "passes": 6,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-29T17:58:27.161Z",
+    "end": "2023-09-29T17:59:05.666Z",
+    "duration": 38505,
+    "testsRegistered": 7,
+    "passPercent": 85.71428571428571,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17ff4163-20e2-483d-b1ab-0499452f7f8f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\DropDownTest.cy.js",
+      "file": "cypress\\e2e\\DropDownTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fab0f37b-e229-4167-a88c-c93b91170585",
+          "title": "DropDown ComponentTest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 8082,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component.png\",\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (1).png\"\n    ]\n  ]\n}",
+              "code": "drop.selectDropdown('Double Espresso');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "98affb06-efb0-4552-a182-acf512ee97e4",
+              "parentUUID": "fab0f37b-e229-4167-a88c-c93b91170585",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 5935,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (2).png\",\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (3).png\"\n    ]\n  ]\n}",
+              "code": "drop.selectDropdown('Americano');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "ad2d3f6b-9a58-48de-949e-7074068ee0d4",
+              "parentUUID": "fab0f37b-e229-4167-a88c-c93b91170585",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 5561,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (4).png\",\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (5).png\"\n    ]\n  ]\n}",
+              "code": "drop.selectDropdown('Cappuccino');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "5f58e04a-39cd-47c9-bf1f-d7050e1e46e3",
+              "parentUUID": "fab0f37b-e229-4167-a88c-c93b91170585",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 5570,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (6).png\",\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (7).png\"\n    ]\n  ]\n}",
+              "code": "drop.selectDropdown('Americano');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "d67c7e61-d8b7-411b-99c3-5564381ee233",
+              "parentUUID": "fab0f37b-e229-4167-a88c-c93b91170585",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 5425,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (8).png\",\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (9).png\"\n    ]\n  ]\n}",
+              "code": "drop.selectDropdown('mocha');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "bc2d7298-83d4-49c0-afdf-d30ed2c05aee",
+              "parentUUID": "fab0f37b-e229-4167-a88c-c93b91170585",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Dropdown  Component ",
+              "fullTitle": "DropDown ComponentTest Verify Dropdown  Component ",
+              "timedOut": null,
+              "duration": 6650,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (10).png\",\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- Verify Dropdown  Component (11).png\"\n    ]\n  ]\n}",
+              "code": "drop.selectDropdown('Americano');\ncy.wait(2000);",
+              "err": {},
+              "uuid": "f17a4684-a792-4401-ad72-37f6771d0a7c",
+              "parentUUID": "fab0f37b-e229-4167-a88c-c93b91170585",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "c5974394-d7b4-4b33-be09-ce07dd411d33",
+              "title": "ally",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should have no detectable ally error on page load ",
+                  "fullTitle": "DropDown ComponentTest ally should have no detectable ally error on page load ",
+                  "timedOut": null,
+                  "duration": 913,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DropDownTest.cy.js\\\\DropDown ComponentTest -- ally -- should have no detectable ally error on page load (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.checkA11y();",
+                  "err": {
+                    "message": "AssertionError: 2 accessibility violations were detected: expected 2 to equal 0",
+                    "estack": "AssertionError: 2 accessibility violations were detected: expected 2 to equal 0\n    at Context.eval (webpack://ui-kit-test-app/./node_modules/cypress-axe/dist/index.js:100:0)",
+                    "diff": null
+                  },
+                  "uuid": "49504a59-686c-4779-9d08-904bc11b4e2e",
+                  "parentUUID": "c5974394-d7b4-4b33-be09-ce07dd411d33",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "49504a59-686c-4779-9d08-904bc11b4e2e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 913,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "98affb06-efb0-4552-a182-acf512ee97e4",
+            "ad2d3f6b-9a58-48de-949e-7074068ee0d4",
+            "5f58e04a-39cd-47c9-bf1f-d7050e1e46e3",
+            "d67c7e61-d8b7-411b-99c3-5564381ee233",
+            "bc2d7298-83d4-49c0-afdf-d30ed2c05aee",
+            "f17a4684-a792-4401-ad72-37f6771d0a7c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37223,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
