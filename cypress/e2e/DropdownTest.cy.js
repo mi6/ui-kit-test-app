@@ -9,6 +9,9 @@ describe('DropDown ComponentTest', () => {
   
     
     it('Verify Dropdown  Component ', () => {
+      
+      
+
         drop.selectDropdown('Double Espresso')
         cy.wait(2000)
         
