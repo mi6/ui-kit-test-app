@@ -19,10 +19,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["jest", "node", "cypress"],
+    "types": ["jest", "node"],
     "esModuleInterop": true,
   },
-  "exclude": ["cypress-tests/cypress.config.ts"],
-  "include": ["src", "jest.config.js"],
+  "include": ["src", "jest.config.js", "cypress-tests/cypress/utils"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

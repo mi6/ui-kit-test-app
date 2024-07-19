@@ -8,8 +8,9 @@ import {
   HAVE_BEEN_CALLED_WITH,
   NOT_HAVE_ATTR,
   HAVE_CLASS
-} from "../../src/utils/cyConstants";
+} from "../cypress/utils/cyConstants";
 import Subscription from "../../src/components/Subscription/Subscription";
+import React from "react";
 
 //* CONSTANTS
 // ICDS Components
@@ -112,6 +113,39 @@ const checkDateInputValue = (date: Date | null) => {
     });
 };
 
+const formValues = {
+  grind: 'aeropress',
+  variety: 'house',
+  size: '250',
+  name: 'Java the Hutt',
+  email: 'javadahutt@tattooine.com',
+  phone: '1234567890',
+  contact: ['sms', 'email'],
+}
+
+const filledForm = (page?: string): {} => {
+  return {
+    "checkoutForm": {
+      "dateToStart": page === "checkout" ? new Date() : '',
+      "terms": page === "checkout" ? "agree" : '',
+    },
+    "coffeeForm": {
+      "variety": formValues.variety,
+      "grind": formValues.grind,
+      "size": formValues.size,
+    },
+    "detailForm": {
+      "contact": [
+        page === "details" || page === "checkout" ? formValues.contact[0] : "",
+        page === "details" || page === "checkout" ? formValues.contact[1] : "",
+      ],
+      "email": page === "details" || page === "checkout" ? formValues.email : "", 
+      "name": page === "details" || page === "checkout" ? formValues.name : "",
+      "phone": page === "details" || page === "checkout" ? formValues.phone : "",
+    },
+  }
+}
+
 describe("Coffee subscription form", () => {
   beforeEach(() => {
     cy.viewport("macbook-16");
@@ -143,23 +177,7 @@ describe("Coffee subscription form", () => {
     // Go to next step, check the stepper and the logged formValues so far
     cy.get(IC_BUTTON).contains("Add to order").click();
     checkCurrentStep(1);
-    cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, {
-      coffeeForm: {
-        variety: "house",
-        grind: "aeropress",
-        size: "250",
-      },
-      detailForm: {
-        name: "",
-        email: "",
-        phone: "",
-        contact: ["", ""],
-      },
-      checkoutForm: {
-        dateToStart: "",
-        terms: "",
-      },
-    });
+    cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, filledForm());
 
     // Fill out the text fields
     clickOnShadowEl(IC_TEXT_FIELD, IC_INPUT_CONTAINER);
@@ -177,23 +195,7 @@ describe("Coffee subscription form", () => {
 
     // Go to next step, check the stepper and the logged formValues so far
     cy.get(IC_BUTTON).contains("Add to order").click();
-    cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, {
-      coffeeForm: {
-        variety: "house",
-        grind: "aeropress",
-        size: "250",
-      },
-      detailForm: {
-        name: "Java the Hutt",
-        email: "javadahutt@tattooine.com",
-        phone: "1234567890",
-        contact: ["sms", "email"],
-      },
-      checkoutForm: {
-        dateToStart: "",
-        terms: "",
-      },
-    });
+    cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, filledForm("details"));
     checkCurrentStep(2);
 
     // Select a date using the date picker
@@ -211,23 +213,7 @@ describe("Coffee subscription form", () => {
     // Submit and check the logged formValues
     cy.get(IC_BUTTON).contains("Submit order").click();
     let date = new Date();
-    cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, {
-      coffeeForm: {
-        variety: "house",
-        grind: "aeropress",
-        size: "250",
-      },
-      detailForm: {
-        name: "Java the Hutt",
-        email: "javadahutt@tattooine.com",
-        phone: "1234567890",
-        contact: ["sms", "email"],
-      },
-      checkoutForm: {
-        dateToStart: date,
-        terms: "agree",
-      },
-    });
+    cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, filledForm("checkout"));
   });
   it("should show validation errors", () => {
     mount(<Subscription />);

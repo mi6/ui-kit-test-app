@@ -318,6 +318,7 @@ const Subscription: React.FC = () => {
                 variant="primary"
                 className="button"
                 onClick={(ev) => handleClick(ev, next)}
+                data-testid="coffee-submit-btn"
               >
                 Add to order
               </IcButton>
@@ -376,7 +377,8 @@ const Subscription: React.FC = () => {
                     !formValues.detailForm.email.includes("@")) && {
                     validationText: "Please enter an email",
                     validationStatus: "error",
-                  })}
+                })}
+                data-test-id="email-text-field"
               />
               <IcTextField
                 label="Phone"
@@ -433,6 +435,7 @@ const Subscription: React.FC = () => {
                 variant="primary"
                 onClick={(ev) => handleClick(ev, next)}
                 className="button"
+                data-testid="details-submit-btn"
               >
                 Add to order
               </IcButton>
@@ -461,6 +464,7 @@ const Subscription: React.FC = () => {
                 disablePast
                 required
                 size="small"
+                data-testid="date-picker"
                 value={formValues.checkoutForm.dateToStart}
                 onIcChange={(ev) =>
                   handleChange("checkoutForm", "dateToStart", ev.detail.value)
@@ -471,6 +475,8 @@ const Subscription: React.FC = () => {
                     validationStatus: "error",
                   })}
               />
+              </div>
+              <div className="input-container">
               <IcRadioGroup
                 label="Please agree to the terms and conditions"
                 name="terms"
