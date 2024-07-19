@@ -9,8 +9,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "jest": "jest",
-    "prettier": "prettier --config ../../.prettierrc.json --ignore-path ../../.prettierignore src --check",
-    "prettier:fix": "prettier --config ../../.prettierrc.json --ignore-path ../../.prettierignore src --write",
     "test": "jest"
   },
   "dependencies": {
@@ -18,9 +16,7 @@
     "@ukic/canary-web-components": "^2.0.0-canary.19",
     "@ukic/fonts": "^2.6.0",
     "@ukic/react": "^2.2.0",
-    "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
-    "vite-jest": "^0.1.4"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.8",
