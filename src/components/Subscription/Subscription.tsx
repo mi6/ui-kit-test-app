@@ -30,113 +30,114 @@ import {
 } from "./constants";
 import { handleSteps } from "./methods";
 import { FormValues, FormSteps } from "./types";
+import { Navigate } from "react-router-dom";
 
 const Subscription: React.FC = () => {
   const [formValues, setFormValues] = useState<FormValues>(initialFormValues);
   const [formSteps, setFormSteps] = useState<FormSteps>(initialFormSteps);
   const [formValidation, setFormValidation] = useState<boolean>(false);
 
-  const handleNextStep = () => {
-    let updatedFormSteps = { ...formSteps };
-
-    if (formSteps.chooseCoffee.current) {
-      const { variety, grind, size } = formValues.coffeeForm;
-      if ([variety, grind, size].some((value) => value === "")) {
-        setFormValidation(true);
-        return;
-      }
-      setFormValidation(false);
-      updatedFormSteps.chooseCoffee = {
-        ...formSteps.chooseCoffee,
-        active: true,
-        completed: true,
-        current: false,
-      };
-      updatedFormSteps.enterDetails = {
-        ...formSteps.enterDetails,
-        active: true,
-        completed: false,
-        current: true,
-      };
-    } else if (formSteps.enterDetails.current) {
-      const { name, email, phone } = formValues.detailForm;
-      if (
-        [name, email, phone].some((value) => value === "") ||
-        !email.includes("@")
-      ) {
-        setFormValidation(true);
-        return;
-      }
-      setFormValidation(false);
-      updatedFormSteps.chooseCoffee = {
-        ...formSteps.chooseCoffee,
-        active: true,
-        completed: true,
-        current: false,
-      };
-      updatedFormSteps.enterDetails = {
-        ...formSteps.enterDetails,
-        active: true,
-        completed: true,
-        current: false,
-      };
-      updatedFormSteps.checkout = {
-        ...formSteps.checkout,
-        active: true,
-        completed: false,
-        current: true,
-      };
-    } else {
-      throw new Error("Invalid action");
-    }
-    setFormSteps(updatedFormSteps);
-  };
-
-  const handleBackStep = () => {
-    let updatedFormSteps = { ...formSteps };
-
-    if (formSteps.enterDetails.current) {
-      updatedFormSteps.chooseCoffee = {
-        ...formSteps.chooseCoffee,
-        active: true,
-        completed: false,
-        current: true,
-      };
-      updatedFormSteps.enterDetails = {
-        ...formSteps.enterDetails,
-        active: true,
-        completed: false,
-        current: false,
-      };
-    } else if (formSteps.checkout.current) {
-      updatedFormSteps.chooseCoffee = {
-        ...formSteps.chooseCoffee,
-        active: true,
-        completed: true,
-        current: false,
-      };
-      updatedFormSteps.enterDetails = {
-        ...formSteps.enterDetails,
-        active: true,
-        completed: false,
-        current: true,
-      };
-      updatedFormSteps.checkout = {
-        ...formSteps.checkout,
-        active: true,
-        completed: false,
-        current: false,
-      };
-    } else {
-      throw new Error("Invalid action");
-    }
-    setFormSteps(updatedFormSteps);
-  };
-
   const handleClick = useCallback(
     (ev: React.MouseEvent, action: string) => {
       ev.preventDefault();
       console.log(formValues);
+
+      const handleNextStep = () => {
+        const updatedFormSteps = { ...formSteps };
+
+        if (formSteps.chooseCoffee.current) {
+          const { variety, grind, size } = formValues.coffeeForm;
+          if ([variety, grind, size].some((value) => value === "")) {
+            setFormValidation(true);
+            return;
+          }
+          setFormValidation(false);
+          updatedFormSteps.chooseCoffee = {
+            ...formSteps.chooseCoffee,
+            active: true,
+            completed: true,
+            current: false,
+          };
+          updatedFormSteps.enterDetails = {
+            ...formSteps.enterDetails,
+            active: true,
+            completed: false,
+            current: true,
+          };
+        } else if (formSteps.enterDetails.current) {
+          const { name, email, phone } = formValues.detailForm;
+          if (
+            [name, email, phone].some((value) => value === "") ||
+            !email.includes("@")
+          ) {
+            setFormValidation(true);
+            return;
+          }
+          setFormValidation(false);
+          updatedFormSteps.chooseCoffee = {
+            ...formSteps.chooseCoffee,
+            active: true,
+            completed: true,
+            current: false,
+          };
+          updatedFormSteps.enterDetails = {
+            ...formSteps.enterDetails,
+            active: true,
+            completed: true,
+            current: false,
+          };
+          updatedFormSteps.checkout = {
+            ...formSteps.checkout,
+            active: true,
+            completed: false,
+            current: true,
+          };
+        } else {
+          throw new Error("Invalid action");
+        }
+        setFormSteps(updatedFormSteps);
+      };
+
+      const handleBackStep = () => {
+        const updatedFormSteps = { ...formSteps };
+
+        if (formSteps.enterDetails.current) {
+          updatedFormSteps.chooseCoffee = {
+            ...formSteps.chooseCoffee,
+            active: true,
+            completed: false,
+            current: true,
+          };
+          updatedFormSteps.enterDetails = {
+            ...formSteps.enterDetails,
+            active: true,
+            completed: false,
+            current: false,
+          };
+        } else if (formSteps.checkout.current) {
+          updatedFormSteps.chooseCoffee = {
+            ...formSteps.chooseCoffee,
+            active: true,
+            completed: true,
+            current: false,
+          };
+          updatedFormSteps.enterDetails = {
+            ...formSteps.enterDetails,
+            active: true,
+            completed: false,
+            current: true,
+          };
+          updatedFormSteps.checkout = {
+            ...formSteps.checkout,
+            active: true,
+            completed: false,
+            current: false,
+          };
+        } else {
+          throw new Error("Invalid action");
+        }
+        setFormSteps(updatedFormSteps);
+      };
 
       if (action === "next") {
         handleNextStep();
@@ -146,13 +147,13 @@ const Subscription: React.FC = () => {
         throw new Error("Invalid action");
       }
     },
-    [formSteps, formValues]
+    [formSteps, formValues],
   );
 
   const handleChange = (
     formSection: string,
     formValue: string,
-    eventDetail: string | string[] | Date
+    eventDetail: string | string[] | Date,
   ) => {
     setFormValues({
       ...formValues,
@@ -166,13 +167,17 @@ const Subscription: React.FC = () => {
   const toastRegionEl = useRef<HTMLIcToastRegionElement | null>(null);
   const toastEl = useRef<HTMLIcToastElement | null>(null);
 
+  const [redirect, setRedirect] = useState<boolean>(false);
+
   const resetForm = () => {
     setFormValues(initialFormValues);
     setFormSteps(initialFormSteps);
+    setRedirect(true);
   };
 
   const handleSubmit = () => {
     console.log(formValues);
+    localStorage.setItem("formValues", JSON.stringify(formValues));
     const { dateToStart, terms } = formValues.checkoutForm;
     if (
       [dateToStart, terms].some((value) => value === "" || value === "decline")
@@ -186,7 +191,9 @@ const Subscription: React.FC = () => {
     }
   };
 
-  //* This app was originally intended to be used in testing guidance, hence no atomisation of components, keeping the app to a single file
+  if (redirect) {
+    return <Navigate to="/view" />;
+  }
 
   return (
     <>
@@ -196,7 +203,7 @@ const Subscription: React.FC = () => {
         size="small"
         id="top"
         sticky
-        aligned="center"
+        aligned="full-width"
       >
         <IcChip slot="heading-adornment" label="V0.0.01" size="large" />
         <IcStepper slot="stepper">
@@ -217,7 +224,7 @@ const Subscription: React.FC = () => {
       <IcBackToTop target="top" />
       <form onSubmit={handleSubmit}>
         {formSteps.chooseCoffee.current && (
-          <IcSectionContainer aligned="left">
+          <IcSectionContainer aligned="full-width">
             {formValidation && (
               <IcAlert
                 variant="error"
@@ -326,7 +333,7 @@ const Subscription: React.FC = () => {
           </IcSectionContainer>
         )}
         {formSteps.enterDetails.current && (
-          <IcSectionContainer aligned="left">
+          <IcSectionContainer aligned="full-width">
             {formValidation && (
               <IcAlert
                 variant="error"
@@ -358,7 +365,7 @@ const Subscription: React.FC = () => {
                   formValues.detailForm.name === "" && {
                     validationText: "Please enter your name",
                     validationStatus: "error",
-                })}
+                  })}
                 autoFocus
               />
               <IcTextField
@@ -377,7 +384,7 @@ const Subscription: React.FC = () => {
                     !formValues.detailForm.email.includes("@")) && {
                     validationText: "Please enter an email",
                     validationStatus: "error",
-                })}
+                  })}
                 data-test-id="email-text-field"
               />
               <IcTextField
@@ -443,7 +450,7 @@ const Subscription: React.FC = () => {
           </IcSectionContainer>
         )}
         {formSteps.checkout.current && (
-          <IcSectionContainer aligned="left">
+          <IcSectionContainer aligned="full-width">
             {formValidation && (
               <IcAlert
                 variant="error"
@@ -455,7 +462,8 @@ const Subscription: React.FC = () => {
             <IcTypography variant="subtitle-large">Last step!</IcTypography>
             <IcTypography variant="body">
               Please choose a start date for your subscription and agree to the
-              terms and conditions. Feel free to cancel your subscriptions at any time.
+              terms and conditions. Feel free to cancel your subscriptions at
+              any time.
             </IcTypography>
             <div className="input-container">
               <IcDatePicker
@@ -475,8 +483,8 @@ const Subscription: React.FC = () => {
                     validationStatus: "error",
                   })}
               />
-              </div>
-              <div className="input-container">
+            </div>
+            <div className="input-container">
               <IcRadioGroup
                 label="Please agree to the terms and conditions"
                 name="terms"
@@ -525,10 +533,10 @@ const Subscription: React.FC = () => {
               </IcButton>
               <IcToastRegion ref={toastRegionEl}>
                 <IcToast
-                  heading="Thanks for your order!"
+                  heading="Thanks for your order! You will now be redirected to view your subscriptions."
                   ref={toastEl}
                   dismissMode="automatic"
-                  autoDismissTimeout={3000}
+                  autoDismissTimeout={2000}
                   variant="success"
                   onIcDismiss={() => resetForm()}
                 />

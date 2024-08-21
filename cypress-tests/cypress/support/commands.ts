@@ -4,12 +4,12 @@
 import {
   BE_VISIBLE,
   HAVE_CLASS,
-} from "../../../src/utils/cyConstants";
+} from "../utils/cyConstants";
 
 // Create the typing for the getCall command
 declare global {
   interface JQuery {
-    getCall(arg: number): any;
+    getCall(arg: number);
   }
 }
 

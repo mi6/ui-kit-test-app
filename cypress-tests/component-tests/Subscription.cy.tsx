@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
 /// <reference types="Cypress" />
 
 import { mount } from "cypress/react";
@@ -11,6 +10,7 @@ import {
 } from "../cypress/utils/cyConstants";
 import Subscription from "../../src/components/Subscription/Subscription";
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
 //* CONSTANTS
 // ICDS Components
@@ -117,13 +117,13 @@ const formValues = {
   grind: 'aeropress',
   variety: 'house',
   size: '250',
-  name: 'Java the Hutt',
-  email: 'javadahutt@tattooine.com',
+  name: 'John Doe',
+  email: 'johndoe@email.com',
   phone: '1234567890',
   contact: ['sms', 'email'],
 }
 
-const filledForm = (page?: string): {} => {
+const filledForm = (page?: string): object => {
   return {
     "checkoutForm": {
       "dateToStart": page === "checkout" ? new Date() : '',
@@ -154,7 +154,11 @@ describe("Coffee subscription form", () => {
     });
   });
   it("should fill the form with no errors/validation", () => {
-    mount(<Subscription />);
+    mount(
+    <Router>
+      <Subscription />
+    </Router>
+  );
     // checkHydrated will wait until the component is hydrated and ensures it is ready to test
     checkHydrated(IC_PAGE_HEADER);
 
@@ -181,9 +185,9 @@ describe("Coffee subscription form", () => {
 
     // Fill out the text fields
     clickOnShadowEl(IC_TEXT_FIELD, IC_INPUT_CONTAINER);
-    cy.realType("Java the Hutt")
+    cy.realType("John Doe")
       .realPress(TAB_KEY)
-      .realType("javadahutt@tattooine.com")
+      .realType("johndoe@email.com")
       .realPress(TAB_KEY)
       .realType("1234567890");
 
@@ -212,8 +216,8 @@ describe("Coffee subscription form", () => {
     
     // Submit and check the logged formValues
     cy.get(IC_BUTTON).contains("Submit order").click();
-    let date = new Date();
     cy.get(CONSOLE_LOG).should(HAVE_BEEN_CALLED_WITH, filledForm("checkout"));
+    cy.url().should('eq', 'http://localhost:5173/view');
   });
   it("should show validation errors", () => {
     mount(<Subscription />);
