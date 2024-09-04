@@ -1,0 +1,29 @@
+.cards {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  list-style: none;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0;
+}
+
+.container ic-typography {
+  align-self: flex-start;
+}
+
+ic-card-horizontal {
+  --card-max-width: initial;
+}
+
+@media screen and (max-width: 992px) {
+  .cards {
+    grid-template-columns: auto;
+  }
+}
