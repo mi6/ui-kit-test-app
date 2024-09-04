@@ -22,6 +22,6 @@
     "types": ["jest", "node"],
     "esModuleInterop": true,
   },
-  "include": ["src", "jest.config.js", "cypress-tests/cypress/utils"],
+  "include": ["src", "jest.config.js", "cypress-tests/cypress/utils", "cypress-tests/component-tests/helpers.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

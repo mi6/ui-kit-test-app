@@ -19,12 +19,8 @@ import "./commands";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-
 // Importing ICDS style assets
 import "@ukic/react/dist/core/normalize.css";
 import "@ukic/fonts/dist/fonts.css";
 import "@ukic/react/dist/core/core.css";
 import "@ukic/canary-react/dist/core/core.css";
-
-
-

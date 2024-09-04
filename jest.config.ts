@@ -12,7 +12,8 @@ const config: Config = {
     // "/node_modules/(?!@ukic/react)"
   ],
   moduleNameMapper: {
-    "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
+    "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/assetTransformer.js",
   }
 };
 
